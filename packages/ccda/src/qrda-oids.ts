@@ -1,0 +1,48 @@
+// SPDX-FileCopyrightText: Copyright Orangebot, Inc. and Medplum contributors
+// SPDX-License-Identifier: Apache-2.0
+// Source: https://ecqi.healthit.gov/qrda/versions
+
+// QRDA Category I Template OIDs
+export const OID_CMS_QRDA_CATEGORY_I = '2.16.840.1.113883.10.20.24.1.3';
+export const OID_QDM_BASED_QRDA = '2.16.840.1.113883.10.20.24.1.2';
+export const OID_QRDA_CATEGORY_I = '2.16.840.1.113883.10.20.24.1.1';
+
+// QRDA Section Template OIDs
+export const OID_MEASURE_SECTION = '2.16.840.1.113883.10.20.24.2.2';
+export const OID_MEASURE_SECTION_QDM = '2.16.840.1.113883.10.20.24.2.3';
+export const OID_PATIENT_DATA_SECTION = '2.16.840.1.113883.10.20.17.2.4';
+export const OID_PATIENT_DATA_SECTION_QDM_V8 = '2.16.840.1.113883.10.20.24.2.1';
+export const OID_PATIENT_DATA_SECTION_QDM_V8_CMS = '2.16.840.1.113883.10.20.24.2.1.1';
+export const OID_REPORTING_PARAMETERS_SECTION = '2.16.840.1.113883.10.20.17.2.1';
+export const OID_REPORTING_PARAMETERS_SECTION_CMS = '2.16.840.1.113883.10.20.17.2.1.1';
+
+// QRDA Entry Template OIDs
+export const OID_AUTHOR_DATETIME_QDM = '2.16.840.1.113883.10.20.24.3.155';
+export const OID_ENCOUNTER_DIAGNOSIS_QDM = '2.16.840.1.113883.10.20.24.3.168';
+export const OID_ENCOUNTER_PERFORMED = '2.16.840.1.113883.10.20.24.3.23';
+export const OID_ENCOUNTER_CLASS = '2.16.840.1.113883.10.20.24.3.171';
+export const OID_INTERVENTION_PERFORMED = '2.16.840.1.113883.10.20.24.3.32';
+export const OID_NEGATION_RATIONALE_QDM = '2.16.840.1.113883.10.20.24.3.88';
+export const OID_PATIENT_CHARACTERISTIC_PAYER = '2.16.840.1.113883.10.20.24.3.55';
+export const OID_PROCEDURE_PERFORMED = '2.16.840.1.113883.10.20.24.3.64';
+export const OID_RANK_QDM = '2.16.840.1.113883.10.20.24.3.166';
+
+// QRDA Measure Reference Template OIDs
+export const OID_EMEASURE_REFERENCE_QDM = '2.16.840.1.113883.10.20.24.3.97';
+export const OID_MEASURE_REFERENCE = '2.16.840.1.113883.10.20.24.3.98';
+
+// QRDA Reporting Parameters Template OIDs
+export const OID_REPORTING_PARAMETERS_ACT = '2.16.840.1.113883.10.20.17.3.8';
+export const OID_REPORTING_PARAMETERS_ACT_CMS = '2.16.840.1.113883.10.20.17.3.8.1';
+
+// Facility CMS Certification Number (CCN)
+export const OID_CCN_SYSTEM = '2.16.840.1.113883.4.336';
+export const OID_CMS_EHR_CERTIFICATION_NUMBER = '2.16.840.1.113883.3.2074.1';
+export const OID_ECQM_VERSION_SPECIFIC_ID = '2.16.840.1.113883.4.738';
+export const OID_IHE_PCC = '1.3.6.1.4.1.19376.1.5.3.1.2.1';
+// United States Individual Taxpayer Identification Number (ITIN)
+export const OID_ITIN_ID = '2.16.840.1.113883.4.2';
+export const OID_LANGUAGE_COMMUNICATION = '2.16.840.1.113883.3.88.11.83.2';
+export const OID_ORGANIZATION_ID = '2.16.840.1.113883.19.5';
+export const OID_PATIENT_ID = '1.3.6.1.4.1.115';
+export const OID_SOURCE_OF_PAYMENT_TYPOLOGY_SYSTEM = '2.16.840.1.113883.3.221.5';
