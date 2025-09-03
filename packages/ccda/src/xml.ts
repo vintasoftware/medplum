@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright Orangebot, Inc. and Medplum contributors
 // SPDX-License-Identifier: Apache-2.0
 import { XMLBuilder, XMLParser } from 'fast-xml-parser';
+import { Qrda } from './qrda-types';
 import { XSI_URL } from './systems';
 import { Ccda } from './types';
 
@@ -77,6 +78,12 @@ const ARRAY_PATHS = [
 
   'manufacturedMaterial.code',
   'manufacturedMaterial.lotNumberText',
+
+  // QRDA-specific array paths
+  'ClinicalDocument.participant',
+  'participant.associatedEntity',
+  'organizer.reference',
+  'reference.externalDocument',
 ];
 
 export function convertXmlToCcda(xml: string): Ccda {
@@ -142,4 +149,30 @@ export function convertToCompactXml(obj: any): string {
     .split('\n')
     .map((line: string) => line.trim())
     .join('');
+}
+
+/**
+ * Convert QRDA document to XML string
+ * @param qrda - The QRDA document to convert
+ * @returns XML string representation of the QRDA document
+ */
+export function convertQrdaToXml(qrda: Qrda): string {
+  const builder = new XMLBuilder({
+    ignoreAttributes: false,
+    attributeNamePrefix: '@_',
+    format: true,
+    suppressBooleanAttributes: false,
+    suppressEmptyNode: true,
+    indentBy: '  ',
+  });
+  return builder.build({
+    '?xml': { '@_version': '1.0', '@_encoding': 'utf-8' },
+    ClinicalDocument: {
+      '@_xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+      '@_xmlns': 'urn:hl7-org:v3',
+      '@_xmlns:voc': 'urn:hl7-org:v3/voc',
+      '@_xmlns:sdtc': 'urn:hl7-org:sdtc',
+      ...qrda,
+    },
+  });
 }
